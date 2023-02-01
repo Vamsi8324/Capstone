@@ -22,7 +22,7 @@ public class CoachController {
 	CoachService service;
 	
 	
-	@PostMapping("/coach")
+	@PostMapping("/addcoach")
 	public CoachResponse addCoach(@RequestBody CoachRequest coachRequest) {
 		return service.addCoach(coachRequest);
 	}
