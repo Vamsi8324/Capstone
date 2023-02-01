@@ -14,7 +14,7 @@ export default function UserLogin({setLogged}) {
 
   const userLoginSubmitHandler = async (event) => {
     event.preventDefault();
-    await axios.get(`http://localhost:9090/user-service/user/${userCredentials.uId}`).then((response)=>{
+    await axios.get(`http://localhost:9090/user-service/adduser/${userCredentials.uId}`).then((response)=>{
       setUserData(response);
       validateUser(response);
     }).catch((error)=>{
