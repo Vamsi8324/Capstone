@@ -14,7 +14,7 @@ export default function CoachLogin({setLogged}) {
 
   const coachLoginSubmitHandler = async (event) => {
     event.preventDefault();
-    await axios.get(`http://localhost:9090/coach-service/coach/${coachCredentials.cId}`).then((response)=>{
+    await axios.get(`http://localhost:9090/coach-service/addcoach/${coachCredentials.cId}`).then((response)=>{
       setCoachData(response);
       validateCoach(response);
     }).catch((error)=>{
